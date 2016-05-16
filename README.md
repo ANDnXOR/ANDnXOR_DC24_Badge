@@ -1,0 +1,2 @@
+# ANDnXOR_DC24_Badge
+AND!XOR DEFCON 24 Badge HW and SW
