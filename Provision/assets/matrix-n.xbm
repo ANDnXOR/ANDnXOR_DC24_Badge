@@ -1,0 +1,4 @@
+#define matrix_n_width 6
+#define matrix_n_height 6
+static unsigned char matrix_n_bits[] = {
+   0x00, 0x38, 0x2a, 0x36, 0x22, 0x22 };

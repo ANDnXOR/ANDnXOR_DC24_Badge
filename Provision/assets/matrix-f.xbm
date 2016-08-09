@@ -1,0 +1,4 @@
+#define matrix_f_width 6
+#define matrix_f_height 6
+static unsigned char matrix_f_bits[] = {
+   0x3c, 0x00, 0x18, 0x00, 0x00, 0x04 };

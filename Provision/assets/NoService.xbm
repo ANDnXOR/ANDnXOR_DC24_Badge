@@ -1,0 +1,4 @@
+#define white_no_symbol_hi_width 8
+#define white_no_symbol_hi_height 8
+static unsigned char white_no_symbol_hi_bits[] = {
+   0x3c, 0x62, 0xa1, 0x91, 0x89, 0x85, 0x42, 0x3c };

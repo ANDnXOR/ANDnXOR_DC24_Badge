@@ -1,0 +1,46 @@
+AND!XOR Badge Data Provisioning
+===============================
+
+This folder contains a series of Python scripts, shell scripts (for Linux 
+users), and bat files (for Windows users) to properly provision a badge from 
+bare metal. These scripts will also upgrade existing badges and re-format
+graphics in a way that the badge can read it. 
+
+assets/ - Folder containing all images / animations used on the badge.
+
+ANXFlash.py - When used in conjunction with "Serial Mode" on the badge, this is
+used to flash raw .bin files to the internal SPI NAND Flash memory on the badge.
+This uses a custom-made serial protocol designed for the badge. By custom-made
+we mean
+
+ANXWrite.py - Converts individual images and text binary and writes to arbitrary 
+locations in a .bin file. Used with shell scripts to re-generate .bin images for 
+the NAND. All that's required is an offset within the file to place the data.
+Careful, it does not know what's it's overwriting and will not protect against
+it.
+
+datatobin.sh - Uses ANXWrite.py to generate a .bin file. Any 2-bit index image
+is supported including .gif animations. Additionally, it randomizes the file
+before overwriting with images as a mild form of obfuscation.
+Example: ./datatobin.sh
+
+flashdata.sh - Uses ANXFlash.py to flash a badge that's running in serial mode.
+After writing to NAND flash, it will write a unique node id to NAND. 
+Example: ./flashdata.sh /dev/ttyACM0 ANDnXOR_Badge-Flash.bin
+
+flasher.py - Similar to ANXFlash.py but can write individual images and text to
+the NAND flash at arbitrary locations. Does not account for the fact that NAND
+must be erased in 4K blocks to changes 0 to 1. Assumes it is writing to 0xFF
+sections of memory. 
+Example (Writes unique node ID to the badge at 0x95000 
+python flasher.py -s -d /dev/ttyACM0 -a 0x95000  
+
+human.sh - Script for provisioning a badge from bare metal to fully functional.
+Bare metal badges do not have USB bootloaders. This is designed to flash the 
+bootloader over USB to Serial then badge code and NAND flash data using USB.
+
+nodes.csv - CSV file mapping unique node ids (1-254) to unique MCU serial 
+numbers. This ensures each badge is uniuqe on the network and the ids survive
+re-flashes.
+
+Program_flash.bat - Windows bat file equivalent of flashdata.sh

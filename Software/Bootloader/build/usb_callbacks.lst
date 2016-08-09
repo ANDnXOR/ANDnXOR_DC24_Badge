@@ -1,0 +1,72 @@
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 4
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"usb_callbacks.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.section	.gnu.lto_.inline.524bd2d75b5d5e5d,"",%progbits
+  18 0000 789C6362 		.ascii	"x\234cb`b\300\006\020\242\000\000\272\000\007"
+  18      6062C006 
+  18      10A20000 
+  18      BA0007
+  19              		.text
+  20              		.section	.gnu.lto_.pureconst.524bd2d75b5d5e5d,"",%progbits
+  21 0000 789C6362 		.ascii	"x\234cb`b`d\200\002\000\000F\000\006"
+  21      60626064 
+  21      80020000 
+  21      460006
+  22              		.text
+  23              		.section	.gnu.lto_.symbol_nodes.524bd2d75b5d5e5d,"",%progbits
+  24 0000 789C6362 		.ascii	"x\234cb`\002B\030\000\000\000V\000\007"
+  24      60024218 
+  24      00000056 
+  24      0007
+  25              		.text
+  26              		.section	.gnu.lto_.refs.524bd2d75b5d5e5d,"",%progbits
+  27 0000 789C6362 		.ascii	"x\234cb`b`d\200\002\000\000F\000\006"
+  27      60626064 
+  27      80020000 
+  27      460006
+  28              		.text
+  29              		.section	.gnu.lto_.decls.524bd2d75b5d5e5d,"",%progbits
+  30 0000 789C6362 		.ascii	"x\234cb`bPa``\370\017\004@\212\201\021\212\355\030\010"
+  30      60625061 
+  30      6060F80F 
+  30      04408A81 
+  30      118AED18 
+  31 0015 0000CE1B 		.ascii	"\000\000\316\033\004e"
+  31      0465
+  32              		.text
+  33              		.section	.gnu.lto_.symtab.524bd2d75b5d5e5d,"",%progbits
+  34              		.text
+  35              		.section	.gnu.lto_.opts,"",%progbits
+  36 0000 272D6D74 		.ascii	"'-mthumb' '-mcpu=cortex-m3' '-mthumb-interwork' '-g"
+  36      68756D62 
+  36      2720272D 
+  36      6D637075 
+  36      3D636F72 
+  37 0033 2720272D 		.ascii	"' '-Os' '-ffunction-sections' '-fdata-sections' '-f"
+  37      4F732720 
+  37      272D6666 
+  37      756E6374 
+  37      696F6E2D 
+  38 0066 6C746F27 		.ascii	"lto'\000"
+  38      00
+  39              		.text
+  40              		.cfi_sections	.debug_frame
+  41              	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 usb_callbacks.c
+                            *COM*:0000000000000001 __gnu_lto_v1
+
+NO UNDEFINED SYMBOLS

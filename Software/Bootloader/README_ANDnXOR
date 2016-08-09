@@ -1,0 +1,8 @@
+
+Build with:
+
+make andnxor-dc24-bender
+
+
+Bootloader is:
+binaries/dfu_boot20_andnxor_dc24_bender.bin

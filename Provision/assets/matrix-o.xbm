@@ -1,0 +1,4 @@
+#define matrix_o_width 6
+#define matrix_o_height 6
+static unsigned char matrix_o_bits[] = {
+   0x00, 0x18, 0x10, 0x10, 0x1a, 0x02 };
