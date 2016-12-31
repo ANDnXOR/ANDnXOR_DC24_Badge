@@ -8,7 +8,7 @@
 //#define MASTER 
 
 //Version of the software
-#define VERSION               "v1.3.3.7 SP3"
+#define VERSION               "v1.3.3.7 SP4"
 #define MIN_FLASH_VERSION     0xC
 
 #define MAX_PEER_AGE          10 * 60 * 1000  //10 min
