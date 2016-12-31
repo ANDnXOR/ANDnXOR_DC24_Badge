@@ -59,6 +59,10 @@ void setup()   {
   spi2.setBitOrder(MSBFIRST);
   spi2.setClockDivider(SPI_CLOCK_DIV32);
 
+  //Compiler enables full debug pins but we only need SWD. In fact, JTAG debug pins conflict
+  //with the OLED RESET and OLED DC pins.
+  afio_cfg_debug_ports(AFIO_DEBUG_SW_ONLY);
+
   //Disable peripheral(s) for lower power
   rcc_clk_disable(RCC_ADC2);
   rcc_clk_disable(RCC_ADC3);

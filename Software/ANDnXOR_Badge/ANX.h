@@ -5,7 +5,7 @@
 #include <RTClock.h>
 
 #define ANX_DEBUG
-#define MASTER 
+//#define MASTER 
 
 //Version of the software
 #define VERSION               "v1.3.3.7 SP3"
